@@ -1,5 +1,6 @@
 package forum.alura.apiforum.domain.topico;
 
+import forum.alura.apiforum.domain.resposta.Resposta;
 import forum.alura.apiforum.domain.usuario.Usuario;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -20,6 +21,7 @@ import java.util.List;
 public class Topico {
     private Long id;
     private String mensagem;
+    @Column(name="data_criacao")
     private LocalDateTime dataCriação = LocalDateTime.now();
     @Enumerated(EnumType.STRING)
     private StatusTopico status = StatusTopico.NAO_RESPONDIDO;
@@ -27,6 +29,6 @@ public class Topico {
     private Usuario autor;
     @Embedded
     private Curso curso;
-    @Embedded
+    @ManyToOne
     private List<Resposta> respostas = new ArrayList<>();
 }
