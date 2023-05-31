@@ -38,7 +38,6 @@ public class Topico {
 
     public Topico(DadosCadastroTopico dados) {
         this.mensagem = dados.mensagem();
-        this.dataCriacao = dados.dataCriacao();
         this.status = dados.status();
         this.autor = dados.autor();
         this.curso = dados.curso();

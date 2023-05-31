@@ -12,7 +12,6 @@ public record DadosCadastroTopico(
 
         String titulo,
         String mensagem,
-        LocalDateTime dataCriacao,
         StatusTopico status,
         Usuario autor,
         Curso curso,
