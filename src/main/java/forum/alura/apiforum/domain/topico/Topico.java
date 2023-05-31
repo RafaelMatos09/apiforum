@@ -28,11 +28,12 @@ public class Topico {
     private LocalDateTime dataCriacao = LocalDateTime.now();
     @Enumerated(EnumType.STRING)
     private StatusTopico status = StatusTopico.NAO_RESPONDIDO;
-    @OneToMany
+    @ManyToOne
+    @JoinColumn(name = "autor_id")
     private Usuario autor;
     @Embedded
     private Curso curso;
-    @ManyToMany
+    @OneToMany
     private List<Resposta> respostas = new ArrayList<>();
 
     public Topico(DadosCadastroTopico dados) {

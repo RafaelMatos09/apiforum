@@ -19,11 +19,11 @@ public class Resposta {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String mensagem;
-    @ManyToMany
+    @ManyToOne
     private Topico topico;
     @Column(name = "data_criacao")
     private LocalDateTime dataCriacao = LocalDateTime.now();
-    @OneToMany
+    @ManyToOne
     private Usuario autor;
     private Boolean solucao = false;
 
