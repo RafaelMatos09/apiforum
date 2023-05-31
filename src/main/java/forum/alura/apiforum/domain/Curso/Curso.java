@@ -1,4 +1,4 @@
-package forum.alura.apiforum.domain.topico;
+package forum.alura.apiforum.domain.Curso;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
@@ -15,7 +15,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Embeddable
 public class Curso {
-    @Column(name="curso_nome")
+    @Column(name = "nome_curso")
     private String nome;
+    @Column(name = "categoria_curso")
     private String categoria;
 }

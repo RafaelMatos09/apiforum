@@ -1,5 +1,6 @@
 package forum.alura.apiforum.domain.topico;
 
+import forum.alura.apiforum.domain.Curso.Curso;
 import forum.alura.apiforum.domain.resposta.Resposta;
 import forum.alura.apiforum.domain.usuario.Usuario;
 import jakarta.persistence.*;
@@ -19,16 +20,27 @@ import java.util.List;
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
 public class Topico {
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private String titulo;
     private String mensagem;
     @Column(name="data_criacao")
-    private LocalDateTime dataCriação = LocalDateTime.now();
+    private LocalDateTime dataCriacao = LocalDateTime.now();
     @Enumerated(EnumType.STRING)
     private StatusTopico status = StatusTopico.NAO_RESPONDIDO;
-    @ManyToOne(fetch = FetchType.LAZY)
+    @OneToMany
     private Usuario autor;
     @Embedded
     private Curso curso;
-    @ManyToOne
+    @ManyToMany
     private List<Resposta> respostas = new ArrayList<>();
+
+    public Topico(DadosCadastroTopico dados) {
+        this.mensagem = dados.mensagem();
+        this.dataCriacao = dados.dataCriacao();
+        this.status = dados.status();
+        this.autor = dados.autor();
+        this.curso = dados.curso();
+        this.respostas = dados.respostas();
+    }
 }
