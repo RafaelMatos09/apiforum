@@ -31,9 +31,8 @@ public class SecurityFilter extends OncePerRequestFilter {
             System.out.println(subject);
             var usuario = repository.findByLogin(subject);
             var authentication = new UsernamePasswordAuthenticationToken(usuario, null, usuario.getAuthorities());
-            if (SecurityContextHolder.getContext().getAuthentication() == null) {
-                SecurityContextHolder.getContext().setAuthentication(authentication);
-            }
+            SecurityContextHolder.getContext().setAuthentication(authentication);
+
             System.out.println("LOGADO NA REQUISIÇAO");
         }
 
