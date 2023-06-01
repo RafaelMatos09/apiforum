@@ -1,6 +1,6 @@
 package forum.alura.apiforum.domain.topico;
 
-import forum.alura.apiforum.domain.Curso.Curso;
+import forum.alura.apiforum.domain.curso.Curso;
 import forum.alura.apiforum.domain.resposta.Resposta;
 import forum.alura.apiforum.domain.usuario.Usuario;
 import jakarta.persistence.*;
@@ -31,7 +31,7 @@ public class Topico {
     @ManyToOne
     @JoinColumn(name = "autor_id")
     private Usuario autor;
-    @Embedded
+    @ManyToOne
     private Curso curso;
     @OneToMany
     private List<Resposta> respostas = new ArrayList<>();

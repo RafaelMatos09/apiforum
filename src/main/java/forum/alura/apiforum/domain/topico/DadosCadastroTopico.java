@@ -1,11 +1,9 @@
 package forum.alura.apiforum.domain.topico;
 
-import forum.alura.apiforum.domain.Curso.Curso;
+import forum.alura.apiforum.domain.curso.Curso;
 import forum.alura.apiforum.domain.resposta.Resposta;
 import forum.alura.apiforum.domain.usuario.Usuario;
-import jakarta.validation.constraints.NotBlank;
 
-import java.time.LocalDateTime;
 import java.util.List;
 
 public record DadosCadastroTopico(
