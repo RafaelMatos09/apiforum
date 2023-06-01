@@ -26,8 +26,12 @@
 
 <h2 align="left">:hammer: Funcionalidades</h2>
 
-<strong>Forum Alura</strong>
-        
+<strong>Forum Alura</strong><br>
+     *Criar um novo tópico<br>
+     *Mostrar todos os tópicos criados<br>
+     *Mostrar um tópico específico<br>
+     *Atualizar um tópico<br>
+     *Eliminar um tópico   
 
 
 <br>
