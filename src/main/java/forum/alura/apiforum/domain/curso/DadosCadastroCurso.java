@@ -1,4 +1,10 @@
 package forum.alura.apiforum.domain.curso;
 
-public record DadosCadastroCurso(String nome, String categoria) {
+import jakarta.validation.constraints.NotBlank;
+
+public record DadosCadastroCurso(
+        @NotBlank
+        String nome,
+        @NotBlank
+        String categoria) {
 }
