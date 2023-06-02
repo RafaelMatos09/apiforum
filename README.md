@@ -15,10 +15,24 @@
 
 
 
-<br><br>
 
-
-
+<h1 align="center">API de Fórum Interativo</h1>
+<p align="center">
+    <em>Desafio proposto pela Oracle ONE, turma 4, para o desenvolvimento de uma API de um fórum altamente funcional e interativo.</em>
+</p>
+<p align="center">
+    <strong>Principais Recursos:</strong>
+</p>
+<ul>
+    <li>Criação de novos tópicos, permitindo que os usuários compartilhem suas ideias e iniciem discussões de forma simples e intuitiva.</li>
+    <li>Visualização de todos os tópicos criados, possibilitando aos usuários explorar uma ampla variedade de assuntos e acompanhar as últimas conversas em andamento.</li>
+    <li>Exibição de um tópico específico, para que os usuários possam obter mais detalhes e participar ativamente das discussões relevantes.</li>
+    <li>Atualização de um tópico existente, permitindo que os usuários modifiquem informações ou adicionem novos conteúdos, mantendo os debates atualizados.</li>
+    <li>Eliminação de um tópico, caso seja necessário remover conteúdos inadequados ou encerrar uma discussão específica.</li>
+</ul>
+<p align="center">
+    <em>Este projeto utiliza a framework Spring para criar uma API REST altamente escalável e de alto desempenho.</em>
+</p>
 
 
 
@@ -26,12 +40,23 @@
 
 <h2 align="left">:hammer: Funcionalidades</h2>
 
-<strong>Forum Alura</strong><br>
-     *Criar um novo tópico<br>
-     *Mostrar todos os tópicos criados<br>
-     *Mostrar um tópico específico<br>
-     *Atualizar um tópico<br>
-     *Eliminar um tópico   
+<h1 align="center">Forum Alura</h1>
+<p align="center">
+    <em>API para um fórum interativo, desenvolvido como parte do curso da Alura.</em>
+</p>
+<p align="center">
+    <strong>Funcionalidades Principais:</strong>
+</p>
+<ul>
+    <li><strong>Criar um novo tópico:</strong> Permite aos usuários criar novos tópicos e iniciar discussões.</li>
+    <li><strong>Mostrar todos os tópicos criados:</strong> Exibe uma lista com todos os tópicos já criados, permitindo aos usuários explorar diferentes discussões.</li>
+    <li><strong>Mostrar um tópico específico:</strong> Apresenta detalhes de um tópico específico, incluindo postagens e comentários.</li>
+    <li><strong>Atualizar um tópico:</strong> Permite aos usuários atualizar informações ou adicionar novos conteúdos a um tópico existente.</li>
+    <li><strong>Eliminar um tópico:</strong> Possibilita a remoção de um tópico, caso seja necessário encerrar uma discussão específica.</li>
+</ul>
+<p align="center">
+    <em>Este projeto foi desenvolvido como parte do curso da Alura e utiliza diferentes tecnologias e frameworks para implementar as funcionalidades mencionadas.</em>
+</p>  
 
 
 <br>
@@ -48,9 +73,36 @@ Para executar o projeto, faça o download e extraia o arquivo compactado em uma 
 - Banco de dados MYSQL
 
 <h2> 💻 Dependencias Spring </h2>
-- Spring Web -> Construa aplicativos web, incluindo aplicações RESTful, utilizando o Spring MVC. Utiliza o Apache Tomcat como o contêiner incorporado padrão.<br>
-- Spring Security -> Framework de autenticação altamente personalizável e controle de acesso para aplicações Spring.<br>
-- Spring Data JPA -> Persista dados em bancos de dados SQL com a API de Persistência Java (Java Persistence API) usando o Spring Data e o Hibernate.<br>
-- Lombok -> Biblioteca de anotações Java que auxilia na redução do código repetitivo.<br>
-- Flyway Migration ->  Controle de versão para o seu banco de dados, permitindo migrar de qualquer versão (incluindo um banco de dados vazio) para a versão mais recente do esquema.<br>
-- Validation -> Validação de Beans com o validador do Hibernate.<br>
+<h1 align="center">Forum Alura</h1>
+<p align="center">
+    <em>API para um fórum interativo, desenvolvido como parte do curso da Alura.</em>
+</p>
+<p align="center">
+    <strong>Tecnologias Utilizadas:</strong>
+</p>
+<ul>
+    <li>
+        <strong>Spring Web:</strong> Construa aplicativos web, incluindo aplicações RESTful, utilizando o Spring MVC. Utiliza o Apache Tomcat como o contêiner incorporado padrão.
+    </li>
+    <li>
+        <strong>Spring Security:</strong> Framework de autenticação altamente personalizável e controle de acesso para aplicações Spring.
+    </li>
+    <li>
+        <strong>Spring Data JPA:</strong> Persista dados em bancos de dados SQL com a API de Persistência Java (Java Persistence API) usando o Spring Data e o Hibernate.
+    </li>
+    <li>
+        <strong>Lombok:</strong> Biblioteca de anotações Java que auxilia na redução do código repetitivo.
+    </li>
+    <li>
+        <strong>Flyway Migration:</strong> Controle de versão para o seu banco de dados, permitindo migrar de qualquer versão (incluindo um banco de dados vazio) para a versão mais recente do esquema.
+    </li>
+    <li>
+        <strong>Validation:</strong> Validação de Beans com o validador do Hibernate.
+    </li>
+    <li>
+        <strong>Spring Auth0:</strong> Biblioteca para integração do Auth0 com aplicações Spring, permitindo a autenticação e autorização baseadas em tokens JWT.
+    </li>
+</ul>
+<p align="center">
+    <em>Este projeto foi desenvolvido como parte do curso da Alura e utiliza diferentes tecnologias e frameworks para implementar as funcionalidades mencionadas.</em>
+</p>
