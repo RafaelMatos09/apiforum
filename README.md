@@ -53,9 +53,6 @@
     <li><strong>Atualizar um tópico:</strong> Permite aos usuários atualizar informações ou adicionar novos conteúdos a um tópico existente.</li>
     <li><strong>Eliminar um tópico:</strong> Possibilita a remoção de um tópico, caso seja necessário encerrar uma discussão específica.</li>
 </ul>
-<p align="center">
-    <em>Este projeto foi desenvolvido como parte do curso da Alura e utiliza diferentes tecnologias e frameworks para implementar as funcionalidades mencionadas.</em>
-</p>  
 
 
 <br>
