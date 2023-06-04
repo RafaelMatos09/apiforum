@@ -10,20 +10,16 @@ import jakarta.validation.constraints.NotNull;
 import java.util.List;
 
 public record DadosCadastroTopico(
-        @NotBlank
+
         String titulo,
-        @NotBlank
+
         String mensagem,
-        @NotNull
-        @Valid
+
         StatusTopico status,
-        @NotNull
-        @Valid
+
         Usuario autor,
-        @NotNull
-        @Valid
+
         Curso curso,
-        @NotNull
-        @Valid
+
         List<Resposta> respostas) {
 }

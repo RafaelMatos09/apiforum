@@ -29,7 +29,6 @@ public class Topico {
     @Enumerated(EnumType.STRING)
     private StatusTopico status = StatusTopico.NAO_RESPONDIDO;
     @ManyToOne
-    @JoinColumn(name = "autor_id")
     private Usuario autor;
     @ManyToOne
     private Curso curso;
