@@ -5,6 +5,7 @@ import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import java.util.Collection;
 import java.util.List;
@@ -22,13 +23,14 @@ public class Usuario implements UserDetails {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
+    @Column(unique=true)
     private String login;
     private String senha;
 
     public Usuario(DadosCadastroUsuario dados) {
         this.nome = dados.nome();
         this.login = dados.login();
-        this.senha = dados.senha();
+        this.senha = passEncode(dados.senha());
     }
 
     @Override
@@ -65,4 +67,11 @@ public class Usuario implements UserDetails {
     public boolean isEnabled() {
         return true;
     }
+
+    private String passEncode(String senha) {
+        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+        return passwordEncoder.encode(senha);
+    }
+
+
 }
