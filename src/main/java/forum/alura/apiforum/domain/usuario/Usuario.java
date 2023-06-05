@@ -26,8 +26,10 @@ public class Usuario implements UserDetails {
     @Column(unique=true)
     private String login;
     private String senha;
+    private Boolean ativo;
 
     public Usuario(DadosCadastroUsuario dados) {
+        this.ativo = true;
         this.nome = dados.nome();
         this.login = dados.login();
         this.senha = passEncode(dados.senha());
@@ -71,6 +73,26 @@ public class Usuario implements UserDetails {
     private String passEncode(String senha) {
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
         return passwordEncoder.encode(senha);
+    }
+
+    public void atualizarInformacoes(DadosAtualizacaoUsuario dados) {
+        if (dados.id() != null) {
+            this.id = dados.id();
+        }
+        if (dados.ativo() != null) {
+            this.ativo = dados.ativo();
+        }
+        if (dados.nome() != null) {
+            this.nome = dados.nome();
+        }
+        if (dados.login() != null) {
+            this.login = dados.login();
+        }
+
+    }
+
+    public void excluir() {
+        this.ativo = false;
     }
 
 
