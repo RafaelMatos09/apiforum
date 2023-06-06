@@ -21,11 +21,11 @@ public class Resposta {
     private Long id;
     private Boolean ativo;
     private String mensagem;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private Topico topico;
     @Column(name = "data_criacao")
     private LocalDateTime dataCriacao = LocalDateTime.now();
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private Usuario autor;
     private Boolean solucao = false;
 

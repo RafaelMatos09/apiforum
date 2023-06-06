@@ -30,9 +30,9 @@ public class Topico {
     private LocalDateTime dataCriacao = LocalDateTime.now();
     @Enumerated(EnumType.STRING)
     private StatusTopico status = StatusTopico.NAO_RESPONDIDO;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private Usuario autor;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private Curso curso;
     @OneToMany
     private List<Resposta> respostas = new ArrayList<>();
