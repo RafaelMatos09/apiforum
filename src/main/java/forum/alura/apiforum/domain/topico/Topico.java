@@ -31,8 +31,10 @@ public class Topico {
     @Enumerated(EnumType.STRING)
     private StatusTopico status = StatusTopico.NAO_RESPONDIDO;
     @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="autor_id")
     private Usuario autor;
     @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="curso_id")
     private Curso curso;
     @OneToMany
     private List<Resposta> respostas = new ArrayList<>();
